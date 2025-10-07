@@ -19,7 +19,6 @@ int main(){
     char  Codigo2 [50];
     char  Nome_da_Cidade2 [50];
     int  Populacao2;
-    int  Populacao2;
     float Area2;
     float PIB2;
     int   Numero_de_Pontos_Turisticos2;
@@ -43,16 +42,13 @@ int main(){
 
     printf("Digite a Populacao: \n");
     scanf("%d", &Populacao1); 
-    scanf("%d", &Populacao1); 
 
     printf("Digite sua Area: \n");
     scanf("%f", &Area1);
 
     printf("Digite seu PIB: \n");
-    printf("Digite seu PIB: \n");
     scanf("%f", &PIB1);
 
-    printf("Digite o Numero de Pontos Turisticos: \n");
     printf("Digite o Numero de Pontos Turisticos: \n");
     scanf("%d", &Numero_de_Pontos_Turisticos1);
 
@@ -77,22 +73,29 @@ int main(){
      scanf("%f", &PIB2);
 
      printf("Digite o Numero de Pontos Turisticos: \n");
-    scanf("%d", &Numero_de_Pontos_Turisticos2);
-
+     scanf("%d", &Numero_de_Pontos_Turisticos2);
+   
+    // ESCOLHA DO ATRIBUTO PARA COMPARAÇÃO
+    // ESCOLHA AQUI QUAL ATRIBUTO COMPARAR:
+    // 1 = População, 2 = Área, 3 = PIB, 4 = Densidade Populacional, 5 = PIB per Capita
+    int atributo_escolhido = 4;  // Densidade Populacional (menor vence)
      
     // COMPARAÇÕES ENTRE AS CARTAS
     // COMPARAÇÃO 1: POPULAÇÃO (MAIOR VENCE)
-    printf("     Comparação de Cartas:População:\n");
-    printf("Carta 1 - %s(%s):%lu \n", Nome_da_Cidade1,Codigo1,Populacao1);
-    printf("Carta 1 - %s(%s):%lu \n", Nome_da_Cidade2,Codigo2,Populacao2);
-     if (Populacao1>Populacao2) {
+    if(atributo_escolhido == 1){
+       printf("     Comparação de Cartas:População:\n\n");
+       printf("Carta 1 - %s(%s):%d \n", Nome_da_Cidade1,Codigo1,Populacao1);
+       printf("Carta 1 - %s(%s):%d \n", Nome_da_Cidade2,Codigo2,Populacao2);
+      if (Populacao1>Populacao2) {
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
       }else if (Populacao1>Populacao2) {
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }
+   }
 
     // COMPARAÇÃO 2: ÁREA (MAIOR VENCE)
-    printf("     Comparação de Cartas:Área:\n");
+    if(atributo_escolhido == 2){
+    printf("     Comparação de Cartas:Área:\n\n");
     printf("Carta 1 - %s(%s):%.2f \n", Nome_da_Cidade1,Codigo1,Area1);
     printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,Area2);
      if (Area1>Area2) {
@@ -100,8 +103,11 @@ int main(){
      }else if (Area1>Area2) {
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }
+   }
+
      // COMPARAÇÃO 3: PIB (MAIOR VENCE)
-    printf("    Comparação de Cartas:PIB:\n");
+     if(atributo_escolhido == 3){
+    printf("    Comparação de Cartas:PIB:\n\n");
     printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB1);
     printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB2);
      if (PIB1>PIB2) {
@@ -109,8 +115,10 @@ int main(){
      }else if (PIB1>PIB2){
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }
+   }
     // COMPARAÇÃO 4: PONTOS TURÍSTICOS (MAIOR VENCE)
-    printf("     Comparação de Cartas:Pontos Turísticos:\n");
+    if(atributo_escolhido == 4){
+    printf("     Comparação de Cartas:Pontos Turísticos:\n\n");
     printf("Carta 1 - %s(%s):%d\n", Nome_da_Cidade1,Codigo1,Numero_de_Pontos_Turisticos1);
     printf("Carta 2 - %s(%s):%d \n", Nome_da_Cidade2,Codigo2,Numero_de_Pontos_Turisticos2);
     if (Numero_de_Pontos_Turisticos1>Numero_de_Pontos_Turisticos2) {
@@ -118,30 +126,36 @@ int main(){
      }else if (Numero_de_Pontos_Turisticos1>Numero_de_Pontos_Turisticos2){
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }
+   }
     // COMPARAÇÃO 5: DENSIDADE POPULACIONAL (MENOR VENCE)
     // Calcula a densidade populacional: População / Área
     Densidade_Populacional1 = (Populacao1 / Area1);
     Densidade_Populacional2 = (Populacao2 / Area2);
-    printf("      Comparação de Cartas:Densidade Populacional:\n");
-    printf("Carta 1 - %s(%s):%.2f \n", Nome_da_Cidade1,Codigo1,Densidade_Populacional1);
-    printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,Densidade_Populacional2);
-    if (Densidade_Populacional1<Densidade_Populacional2) {
-        printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
+
+    if(atributo_escolhido == 5){
+       printf("      Comparação de Cartas:Densidade Populacional:\n\n");
+       printf("Carta 1 - %s(%s):%.2f \n", Nome_da_Cidade1,Codigo1,Densidade_Populacional1);
+       printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,Densidade_Populacional2);
+      if (Densidade_Populacional1<Densidade_Populacional2) {
+          printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
      }else{
-        printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
+          printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }
+   }
     // // COMPARAÇÃO 6: PIB PER CAPITA (MAIOR VENCE)
     // Calcula o PIB per capita: PIB / População
     PIB_per_Capita1 = (PIB1 / Populacao1);
     PIB_per_Capita2 = (PIB2 / Populacao2);
-    printf("       Comparação de Cartas:PIB per Capita:\n");
-    printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB_per_Capita1);
-    printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB_per_Capita2 );
+   if(atributo_escolhido == 1){
+      printf("       Comparação de Cartas:PIB per Capita:\n\n");
+      printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB_per_Capita1);
+      printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB_per_Capita2 );
      if (PIB_per_Capita1>PIB_per_Capita2) {
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
       }else if (PIB_per_Capita1>PIB_per_Capita2){
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }
+   }
     
 return 0;
 }
