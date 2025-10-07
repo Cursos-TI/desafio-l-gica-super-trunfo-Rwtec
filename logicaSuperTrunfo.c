@@ -75,7 +75,7 @@ int main(){
    
     // ESCOLHA DO ATRIBUTO PARA COMPARAÇÃO
     // ESCOLHA AQUI QUAL ATRIBUTO COMPARAR:
-    // 1 = População, 2 = Área, 3 = PIB, 4 = Densidade Populacional, 5 = PIB per Capita
+    // 1 = População, 2 = Área, 3 = PIB, 4 = Pontos Turísticos  5= Densidade Populacional, 6 = PIB per Capita
     int atributo_escolhido = 4;  // Densidade Populacional (menor vence)
      
     // COMPARAÇÕES ENTRE AS CARTAS
@@ -144,7 +144,8 @@ int main(){
     // Calcula o PIB per capita: PIB / População
     PIB_per_Capita1 = (PIB1 / Populacao1);
     PIB_per_Capita2 = (PIB2 / Populacao2);
-   if(atributo_escolhido == 1){
+
+   if(atributo_escolhido == 6){
       printf("       Comparação de Cartas:PIB per Capita:\n\n");
       printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB_per_Capita1);
       printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB_per_Capita2 );
