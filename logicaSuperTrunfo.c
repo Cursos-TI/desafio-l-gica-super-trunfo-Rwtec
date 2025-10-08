@@ -7,7 +7,6 @@ int main(){
     char  Codigo1 [50];                  // Código da carta (string)
     char  Nome_da_Cidade1 [50];          // Nome da cidade (string)
     int  Populacao1;                     // População (inteiro)
-    int  Populacao1;       // População (inteiro)
     float Area1;                         // Área em km² (número decimal)
     float PIB1;                          // PIB em bilhões (número decimal)
     int   Numero_de_Pontos_Turisticos1;  // Número de pontos turísticos (inteiro)
