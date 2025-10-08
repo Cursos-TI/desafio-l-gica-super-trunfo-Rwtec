@@ -75,13 +75,6 @@ int main(){
      printf("Digite o Numero de Pontos Turisticos: \n");
      scanf("%d", &Numero_de_Pontos_Turisticos2);
    
-<<<<<<< HEAD
-    // ESCOLHA DO ATRIBUTO PARA COMPARAÇÃO
-    // ESCOLHA AQUI QUAL ATRIBUTO COMPARAR:
-    // 1 = População, 2 = Área, 3 = PIB, 4 = Densidade Populacional, 5 = PIB per Capita
-    int atributo_escolhido = 4;  // Densidade Populacional (menor vence)
-     
-=======
 
     //MENU INTERATIVO
     // menu interativo no terminal usando a estrutura switch que permita ao jogador escolher qual atributo será usado para comparar as cartas.
@@ -99,7 +92,6 @@ int main(){
 
     switch (escolhadojogador)
     {
->>>>>>> cf7297c (Menu Interativo: Criado um menu interativo no terminal usando a estrutura switch que permita ao jogador escolher qual atributo será usado para comparar as cartas.)
     // COMPARAÇÕES ENTRE AS CARTAS
     // COMPARAÇÃO 1: POPULAÇÃO (MAIOR VENCE)
     case 1:
@@ -183,12 +175,8 @@ int main(){
     // Calcula o PIB per capita: PIB / População
     PIB_per_Capita1 = (PIB1 / Populacao1);
     PIB_per_Capita2 = (PIB2 / Populacao2);
-<<<<<<< HEAD
-   if(atributo_escolhido == 1){
-=======
 
    case 6:
->>>>>>> cf7297c (Menu Interativo: Criado um menu interativo no terminal usando a estrutura switch que permita ao jogador escolher qual atributo será usado para comparar as cartas.)
       printf("       Comparação de Cartas:PIB per Capita:\n\n");
       printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB_per_Capita1);
       printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB_per_Capita2 );
