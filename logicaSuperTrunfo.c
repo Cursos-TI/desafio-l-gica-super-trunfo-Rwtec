@@ -6,7 +6,11 @@ int main(){
     char  Estado1 [50];                  // Nome do Estado (string)
     char  Codigo1 [50];                  // Código da carta (string)
     char  Nome_da_Cidade1 [50];          // Nome da cidade (string)
+<<<<<<< HEAD
     int  Populacao1;                     // População (inteiro)
+=======
+    int  Populacao1;       // População (inteiro)
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
     float Area1;                         // Área em km² (número decimal)
     float PIB1;                          // PIB em bilhões (número decimal)
     int   Numero_de_Pontos_Turisticos1;  // Número de pontos turísticos (inteiro)
@@ -75,6 +79,7 @@ int main(){
      printf("Digite o Numero de Pontos Turisticos: \n");
      scanf("%d", &Numero_de_Pontos_Turisticos2);
    
+<<<<<<< HEAD
 
     //MENU INTERATIVO
     // menu interativo no terminal usando a estrutura switch que permita ao jogador escolher qual atributo será usado para comparar as cartas.
@@ -99,9 +104,24 @@ int main(){
        printf("Carta 1 - %s(%s):%d \n", Nome_da_Cidade1,Codigo1,Populacao1);
        printf("Carta 1 - %s(%s):%d \n", Nome_da_Cidade2,Codigo2,Populacao2);
     if (Populacao1>Populacao2) {
+=======
+    // ESCOLHA DO ATRIBUTO PARA COMPARAÇÃO
+    // ESCOLHA AQUI QUAL ATRIBUTO COMPARAR:
+    // 1 = População, 2 = Área, 3 = PIB, 4 = Pontos Turísticos  5= Densidade Populacional, 6 = PIB per Capita
+    int atributo_escolhido = 4;  // Densidade Populacional (menor vence)
+     
+    // COMPARAÇÕES ENTRE AS CARTAS
+    // COMPARAÇÃO 1: POPULAÇÃO (MAIOR VENCE)
+    if(atributo_escolhido == 1){
+       printf("     Comparação de Cartas:População:\n\n");
+       printf("Carta 1 - %s(%s):%d \n", Nome_da_Cidade1,Codigo1,Populacao1);
+       printf("Carta 1 - %s(%s):%d \n", Nome_da_Cidade2,Codigo2,Populacao2);
+      if (Populacao1>Populacao2) {
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
       }else if (Populacao1>Populacao2) {
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
+<<<<<<< HEAD
       }else{
         printf("Resultado:Empate!\n");
       } break;
@@ -114,9 +134,21 @@ int main(){
     printf("Carta 1 - %s(%s):%.2f km² \n", Nome_da_Cidade1,Codigo1,Area1);
     printf("Carta 2 - %s(%s):%.2f km²\n", Nome_da_Cidade2,Codigo2,Area2);
     if (Area1>Area2) {
+=======
+     }
+   }
+
+    // COMPARAÇÃO 2: ÁREA (MAIOR VENCE)
+    if(atributo_escolhido == 2){
+    printf("     Comparação de Cartas:Área:\n\n");
+    printf("Carta 1 - %s(%s):%.2f \n", Nome_da_Cidade1,Codigo1,Area1);
+    printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,Area2);
+     if (Area1>Area2) {
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
      }else if (Area1>Area2) {
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
+<<<<<<< HEAD
      }else{
 
        printf("Resultado:Empate!\n");
@@ -129,10 +161,21 @@ int main(){
     printf("    Comparação de Cartas:PIB:\n\n");
     printf("Carta 1 -  %s(%s):R$%.2f Bilhões.\n", Nome_da_Cidade1,Codigo1,PIB1);
     printf("Carta 2 - %s(%s):R$%.2f Bilhões.\n", Nome_da_Cidade2,Codigo2,PIB2);
+=======
+     }
+   }
+
+     // COMPARAÇÃO 3: PIB (MAIOR VENCE)
+     if(atributo_escolhido == 3){
+    printf("    Comparação de Cartas:PIB:\n\n");
+    printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB1);
+    printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB2);
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
      if (PIB1>PIB2) {
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
      }else if (PIB1>PIB2){
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
+<<<<<<< HEAD
      }else{ 
         printf("Resultado:Empate!\n");
      } break;
@@ -140,6 +183,12 @@ int main(){
    
     // COMPARAÇÃO 4: PONTOS TURÍSTICOS (MAIOR VENCE)
     case 4:
+=======
+     }
+   }
+    // COMPARAÇÃO 4: PONTOS TURÍSTICOS (MAIOR VENCE)
+    if(atributo_escolhido == 4){
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
     printf("     Comparação de Cartas:Pontos Turísticos:\n\n");
     printf("Carta 1 - %s(%s):%d\n", Nome_da_Cidade1,Codigo1,Numero_de_Pontos_Turisticos1);
     printf("Carta 2 - %s(%s):%d \n", Nome_da_Cidade2,Codigo2,Numero_de_Pontos_Turisticos2);
@@ -147,16 +196,22 @@ int main(){
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
      }else if (Numero_de_Pontos_Turisticos1>Numero_de_Pontos_Turisticos2){
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
+<<<<<<< HEAD
      }else{  
         printf("Resultado:Empate!\n");
      } break;
       
    
+=======
+     }
+   }
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
     // COMPARAÇÃO 5: DENSIDADE POPULACIONAL (MENOR VENCE)
     // Calcula a densidade populacional: População / Área
     Densidade_Populacional1 = (Populacao1 / Area1);
     Densidade_Populacional2 = (Populacao2 / Area2);
 
+<<<<<<< HEAD
     case 5:
        printf("      Comparação de Cartas:Densidade Populacional:\n\n");
        printf("Carta 1 - %s(%s):%.2f hab/km²\n", Nome_da_Cidade1,Codigo1,Densidade_Populacional1);
@@ -171,22 +226,43 @@ int main(){
      } break;
          
    
+=======
+    if(atributo_escolhido == 5){
+       printf("      Comparação de Cartas:Densidade Populacional:\n\n");
+       printf("Carta 1 - %s(%s):%.2f \n", Nome_da_Cidade1,Codigo1,Densidade_Populacional1);
+       printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,Densidade_Populacional2);
+      if (Densidade_Populacional1<Densidade_Populacional2) {
+          printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
+     }else{
+          printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
+     }
+   }
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
     // // COMPARAÇÃO 6: PIB PER CAPITA (MAIOR VENCE)
     // Calcula o PIB per capita: PIB / População
     PIB_per_Capita1 = (PIB1 / Populacao1);
     PIB_per_Capita2 = (PIB2 / Populacao2);
 
+<<<<<<< HEAD
    case 6:
       printf("       Comparação de Cartas:PIB per Capita:\n\n");
       printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB_per_Capita1);
       printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB_per_Capita2 );
    if (PIB_per_Capita1>PIB_per_Capita2) {
+=======
+   if(atributo_escolhido == 6){
+      printf("       Comparação de Cartas:PIB per Capita:\n\n");
+      printf("Carta 1 - %s(%s):%.2f\n", Nome_da_Cidade1,Codigo1,PIB_per_Capita1);
+      printf("Carta 2 - %s(%s):%.2f \n", Nome_da_Cidade2,Codigo2,PIB_per_Capita2 );
+     if (PIB_per_Capita1>PIB_per_Capita2) {
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
         printf("Resultado :Carta 1(%s) Venceu!\n",Nome_da_Cidade1);
       }else if (PIB_per_Capita1>PIB_per_Capita2){
         printf("Resultado:Carta 2(%s) Venceu!\n",Nome_da_Cidade2);
      }else{
       printf("Resultado:Empate!\n");
      }
+<<<<<<< HEAD
      break;
 
      default:
@@ -194,5 +270,9 @@ int main(){
             break;
        
    }
+=======
+   }
+    
+>>>>>>> e50d202fa942ca611ffd5d76630a8ad1c4f403de
 return 0;
 }
